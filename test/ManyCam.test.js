@@ -322,34 +322,34 @@ describe("ManyCam", () => {
 				).rejects.toThrow();
 			});
 		});
-		describe("saveSnapshot", () => {
-			test("should return true on correct params", async () => {
-				let preset = await manyCam.getCurrentPreset();
-				await expect(
-					manyCam.saveSnapshot(
-						preset,
-						"C:/Users/gleb/Pictures/ManyCam"
-					)
-				).resolves.toBeTruthy();
-			});
-			test("should throw if preset doesn't exist", async () => {
-				await expect(
-					manyCam.saveSnapshot(
-						unrealIndex,
-						"C:/Users/gleb/Pictures/ManyCam"
-					)
-				).rejects.toThrow();
-			});
-			test("should throw if path doesn't exist", async () => {
-				let preset = await manyCam.getCurrentPreset();
-				await expect(
-					manyCam.saveSnapshot(
-						preset,
-						"C:hh/Users/gleb/Pictures/ManyCam"
-					)
-				).rejects.toThrow();
-			});
-		});
+		// describe("saveSnapshot", () => {
+		// 	test("should return true on correct params", async () => {
+		// 		let preset = await manyCam.getCurrentPreset();
+		// 		await expect(
+		// 			manyCam.saveSnapshot(
+		// 				preset,
+		// 				"C:/Users/gleb/Pictures/ManyCam"
+		// 			)
+		// 		).resolves.toBeTruthy();
+		// 	});
+		// 	test("should throw if preset doesn't exist", async () => {
+		// 		await expect(
+		// 			manyCam.saveSnapshot(
+		// 				unrealIndex,
+		// 				"C:/Users/gleb/Pictures/ManyCam"
+		// 			)
+		// 		).rejects.toThrow();
+		// 	});
+		// 	test("should throw if path doesn't exist", async () => {
+		// 		let preset = await manyCam.getCurrentPreset();
+		// 		await expect(
+		// 			manyCam.saveSnapshot(
+		// 				preset,
+		// 				"C:hh/Users/gleb/Pictures/ManyCam"
+		// 			)
+		// 		).rejects.toThrow();
+		// 	});
+		// });
 	});
 
 	describe("Layer management", () => {
